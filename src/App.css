@@ -1,0 +1,161 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #1e1e1e;
+  margin: 0; height: 100%; overflow: hidden
+}
+
+.App{
+  display: flex;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 80%;
+  height: 100vh;
+  background: #f1f1f1;
+  word-break: break-all;
+  border-right: 4px solid #4a4a4a;
+}
+
+.bloc-tabs {
+  display: flex;
+}
+.tabs { 
+  padding: 15px;
+  text-align: center;
+  width: 50%;
+  background: #1e1e1e;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.274);
+  box-sizing: content-box;
+  position: relative;
+  outline: none;
+  color: white;
+}
+.tabs:not(:last-child){
+  border-right: 1px solid rgba(0, 0, 0, 0.274);
+}
+
+.active-tabs  {
+  background: #373737;
+  border-bottom: 1px solid transparent;
+}
+
+.active-tabs::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% + 2px);
+  height: 5px;
+  background: rgb(88, 147, 241);
+}
+
+
+
+button {
+  border: none;
+  
+}
+.content-tabs {
+  flex-grow : 1;
+}
+.content {
+  background: #1e1e1e;
+  width: 100%;
+  height: 100%;
+  display: none;
+  color: white;
+}
+.content h2 {
+  padding: 0px 0 5px 0px;
+}
+.content hr {
+  width: 100px;
+  height: 2px;
+  background: #222;
+  margin-bottom: 5px;
+}
+.active-content {
+  display: block;
+}
+
+.sidebar{
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  max-width: 320px;
+}
+
+.sidebar .addBtns{
+  display: flex;
+  height: 30px
+}
+
+.sidebar .addBtns button{
+  background-color: #373737;
+  color: white;
+  flex-grow: 1;
+}
+
+.sidebar button:hover{
+  background-color: #1e1e1e
+}
+
+.kaboomView {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+}
+
+.Details{
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #373737;
+
+  color: white;
+  font-family: monospace;
+  width: 80%;
+
+}
+
+.Details > * {
+  margin-bottom: 15px;
+}
+
+.Details .Sprite {
+  border-radius: 10px;
+  background-color: #2b2b2b;
+  min-height: 64px;
+  min-width: 64px;
+}
+
+.Details .Sprite img {
+  width: 70%;
+  margin: 15%;
+}
+
+.Details .Sprites {
+  width: 100%;
+  display: flex;
+}
+
+.Details .spriteDetails{
+  margin-left: 10px;
+}
