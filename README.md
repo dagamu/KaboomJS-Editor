@@ -1,5 +1,7 @@
 # KaboomJS Editor
 
+![Screenshot](https://github.com/Dagamu110/KaboomJS-Editor/blob/main/screenshot.png?raw=true)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
